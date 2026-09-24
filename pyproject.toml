@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "westquant-pennylane"
+version = "0.1.0a1"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+dependencies = [
+  "westquant-core>=0.2.0a1",
+  "pennylane>=0.45,<0.46",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
