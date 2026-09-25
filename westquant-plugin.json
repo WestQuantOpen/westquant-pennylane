@@ -1,0 +1,29 @@
+{
+  "plugin": {
+    "id": "westquant.pennylane",
+    "version": "0.1.0a1",
+    "api_version": "0.1"
+  },
+  "framework": {
+    "name": "pennylane",
+    "supported_versions": ">=0.45,<0.46"
+  },
+  "capabilities": {
+    "import": [
+      "circuit",
+      "operator"
+    ],
+    "transformations": [
+      "transform_pipeline",
+      "measurement_grouping",
+      "ansatz"
+    ],
+    "evaluators": [
+      "depth",
+      "resources",
+      "measurement_cost"
+    ],
+    "repgraph_export": true,
+    "wqt_policy": false
+  }
+}

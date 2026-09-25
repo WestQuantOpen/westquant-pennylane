@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "westquant-pennylane"
+version = "0.1.0a1"
+description = "Sequential transform and operator representation search for PennyLane"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "Apache-2.0"}
+dependencies = [
+  "westquant-core>=0.2.0a1",
+  "pennylane>=0.45.1,<0.46",
+]
+
+[project.scripts]
+westquant-pennylane-search = "westquant_pennylane.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/WestQuantOpen"
+Source = "https://github.com/WestQuantOpen/westquant-pennylane"
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "../westquant-core/src"]
